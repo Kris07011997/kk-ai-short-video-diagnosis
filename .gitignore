@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.pytest_cache/
+work/
+outputs/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.pdf
