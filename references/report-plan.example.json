@@ -1,0 +1,55 @@
+{
+  "language": "zh",
+  "title": "请填写作品名称",
+  "source_video": "请替换为真实原片路径.mp4",
+  "one_line_judgment": "请根据完整观看结果填写一句话判断。",
+  "creator_intent": {
+    "summary": "请填写用户提供的创作意图，推断时注明。",
+    "confidence": "medium"
+  },
+  "strengths": [],
+  "issues": [
+    {
+      "id": "issue-1",
+      "start": 1.0,
+      "end": 4.0,
+      "headline": "请填写有证据的问题标题",
+      "evidence": "描述原片在这些时间点实际发生了什么，以及对理解的影响。",
+      "action": "写明优先如何重剪，以及确有必要时补拍什么。",
+      "confidence": "medium",
+      "evidence_moments": [
+        {
+          "time": 1.0,
+          "label": "待替换的真实证据点一"
+        },
+        {
+          "time": 4.0,
+          "label": "待替换的真实证据点二"
+        }
+      ],
+      "kk_method": {
+        "name": "请填写检索到的方法名",
+        "rule": "请填写方法原理",
+        "why_here": "解释为什么适用于当前原片",
+        "case_ids": [
+          "请替换为真实来源编号"
+        ]
+      }
+    }
+  ],
+  "quick_actions": [
+    "请填写第一轮最值得先做的修改。"
+  ],
+  "next_practice": "请填写一个具体练习目标。",
+  "evidence_limits": [
+    "请如实填写观察或来源限制；没有则使用空数组。"
+  ],
+  "further_learning": [
+    {
+      "issue_id": "issue-1",
+      "source_type": "unmatched",
+      "reference_level": "method_level",
+      "focus": "尚未检索到直接对应来源，先完成当前原片的修改。"
+    }
+  ]
+}

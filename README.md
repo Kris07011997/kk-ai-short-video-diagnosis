@@ -1,65 +1,100 @@
-# KK·AI短片诊断
+# KK AI Video Diagnosis v1
 
-**把 6 年审片、做过过亿播放内容的经验，整理成一个帮你找到改片思路的 Skill。**
+**English** | [简体中文](README_CN.md)
 
-我看到很多 Skill 都在帮你更轻松地把视频做出来。但做完以后，这条视频到底有没有问题、哪里还能做得更好、具体该怎么改，往往还得自己摸索。
+**One complete Skill. One actionable PDF report. In Chinese or English.**
 
-KK·AI短片诊断就是为这一步做的。
+KK turns six years of video review experience, including work on content with over 100 million views, into a workflow for reviewing your own edits.
 
-把剪好的视频和表达目标交给它，从结构、镜头、节奏、声音和画面等方面梳理问题，再把原片时间点、截图和修改建议整理成一份 PDF 报告，帮助你明确第一轮该怎么改。
+Many AI tools help you make a video. This Skill helps you examine the result: where the viewing experience breaks down, why it happens, and what to change first.
 
-> 发布进度：项目主页已建立，v1.0.0 完整 Skill 包正在整理。当前仓库尚不能作为完整安装包使用。
+It reviews edited vlogs, travel videos, product and brand videos, portraits, narrative shorts, tutorials and AI shorts. Each diagnosis connects the actual footage, timestamps and audio observations to practical editing decisions.
 
-## 方法与案例
+## Choose your report language
 
-当前本地 v1 整理了 **79 张审片方法卡、94 份拉片案例拆解、10 类题材与分析方向**。公开包内容以正式版本说明为准。
+An explicit language request takes priority. Otherwise, the Agent follows the main language of your request: Chinese or English. The language spoken in the video does not determine the report language.
 
-方法卡提供判断思路、修改动作和低成本替代方案；案例拆解提供镜头、构图、剪辑和声音的参考；题材分类帮助 Agent 根据作品目标，选择对应的分析路径。
+> Review this video and deliver the PDF report in English.
 
-同样是“开头没感觉”，Vlog 可能需要更快交代正在发生的事，旅拍可能需要建立地点和进入感，产品片可能需要先让观众理解使用场景。诊断会顺着具体问题，匹配相应的方法。
+> 请诊断这条视频，用英文输出 PDF 报告。
 
-## 会分析什么
+> Review this video and write the PDF report in Chinese.
 
-| 分析方面 | 重点关注 |
-| --- | --- |
-| 表达与结构 | 主题、信息顺序、开头与结尾、故事推进 |
-| 镜头与信息 | 景别、动作、镜头关系、信息重复或缺失 |
-| 剪辑与节奏 | 镜头时长、切点、停顿、段落变化 |
-| 声音与配合 | 人声、音乐、环境声、音效与声画关系 |
-| 画面与可读性 | 构图、视觉重点、字幕与画面信息 |
-| 修改优先级 | 问题影响、现有素材、修改成本与先后顺序 |
+The diagnosis, captions, method explanations, suggested edits, section labels and footer use the selected language. Source IDs and original work titles retain their identity. The knowledge base remains primarily Chinese; the Agent searches it with Chinese keywords and explains relevant findings in the selected language.
 
-适用于已拍摄或剪辑的 Vlog、旅拍、产品与品牌片、空间视频、人物片、剧情短片、教程口播及 AI 短片。
+One PDF is delivered per review:
 
-## 报告里有什么
+- Chinese: `KK-AI短片诊断报告.pdf`
+- English: `KK-AI-Video-Diagnosis-Report.pdf`
 
-- 作品目标与整体观察。
-- 值得保留的片段及其原因。
-- 最多三个重点问题，附原片时间点、截图和分析依据。
-- 每个问题对应的重剪、替换或补拍动作。
-- 第一轮修改顺序与后续练习方向。
+The Agent writes the diagnostic prose in the selected language before export. The PDF renderer localizes fixed labels and metadata; it does not translate prose or analyze footage by itself.
 
-正式报告只输出一份 PDF。修改后，可以把新视频和上一版报告一起交给 Agent，继续对照复查。
+## Methods and cases
 
-## 使用示例
+The v1 package contains **79 review method cards, 94 deduplicated case breakdowns and 10 topic maps**. The maps cover vlogs, travel, emotional storytelling, products, spaces, characters, narratives, sound, tutorials and AI visuals.
 
-完整包发布后，按包内 README 安装，并提供视频：
+The workflow starts with the goal of the specific video, then retrieves relevant methods and cases. It does not impose the same editing pattern on every genre. Third-party materials have separate distribution terms; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-```text
-请使用 kk-ai-short-video-diagnosis 分析这条视频。
+## Quick start
 
-这条视频主要给……看。
-我希望观众看完记住……。
-目前最想改善的是……。
+1. Place the complete `kk-ai-short-video-diagnosis` folder in your Agent's skills directory, or ask the Agent to read `SKILL.md` in this folder. Keep the scripts, references, fonts and knowledge folders together.
+2. Use Python 3.10 or newer and install the dependencies:
 
-请结合原片时间点和截图说明问题，指出值得保留的部分，
-给出具体修改动作和第一轮修改顺序，输出 PDF 报告。
+   ```bash
+   python -m pip install -r requirements.txt
+   python scripts/check_environment.py --output-dir "your-work-directory" --json
+   ```
+
+3. Make FFmpeg and ffprobe available on PATH for frame extraction. Provide the source video to an Agent that can inspect video and audio and execute local scripts:
+
+   ```text
+   Use kk-ai-short-video-diagnosis to review this video.
+   My intended audience is ...
+   I want viewers to remember ...
+   I would most like to improve ...
+   Explain the problems using actual timestamps and screenshots.
+   Keep what works and prioritize actionable edits.
+   Deliver one PDF report in English.
+   ```
+
+For Codex, common skill locations are `$CODEX_HOME/skills` or `~/.codex/skills`. Other Agents use their own skill loading mechanisms. Full audiovisual review depends on the capabilities available in the chosen environment.
+
+## What the report contains
+
+- Creative intent and an overall judgment.
+- Up to two strengths, supported by source footage.
+- Zero to three distinct issues, with timestamps, screenshots, explanations and concrete edits.
+- Relevant KK methods and traceable references.
+- A prioritized revision list and one focus for the next video.
+- Further learning and any material evidence limitations.
+
+The workflow permits a review with no clear issue. It does not invent problems or references to fill a template. Long text continues onto additional pages, and screenshots keep their original aspect ratio.
+
+For a revision review, supply the new video and the previous report. The Agent checks which issues are resolved, partly resolved or still present, and whether new issues appeared.
+
+## How it works
+
+The Agent reviews the full video and audio, identifies concrete symptoms, retrieves relevant method cards and cases, and writes an internal report plan. The export script verifies the plan and the source of its screenshots before generating the PDF.
+
+Intermediate JSON, extracted frames and audio stay in the work directory. The final delivery contains only the PDF. No online speech synthesis service is required. The bundled scripts do not upload the video; input handling by your Agent provider follows that provider's settings.
+
+Plan examples: [Chinese](references/report-plan.example.json) / [English](references/report-plan.en.example.json). These are format templates, not completed diagnoses. Replace all placeholders with observations from the actual video. Detailed field rules are in the [report specification](references/visual-report-spec.md).
+
+## Development and license
+
+Version: `1.0.0`. KK's original code, workflow and method organization are available under the [MIT License](LICENSE). Font and third-party source terms are listed separately in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests -v
+python scripts/validate_method_card_evidence.py
+python scripts/verify_package.py
 ```
 
-## 开源与交流
+Tests cover retrieval, validation, language compatibility and PDF text preservation. They do not substitute for assessing the quality of a real video diagnosis.
 
-KK 原创代码、流程、使用文档和原创方法整理采用 MIT。第三方内容的许可范围将在完整包中分别说明。
+Feedback and contributions are welcome. When reporting a problem, share a minimal example you have permission to distribute, reproduction steps and the expected result.
 
-欢迎通过 Issues 交流视频创作中的问题，以及对这个 Skill 的使用建议。
+**KK / In the AI era, keep learning. Keep improving.**
 
-**KK｜AI时代，持续学习，无限进步。**
+Package integrity: `PACKAGE-MANIFEST.json` records every distributed file and its SHA-256. After intentional changes, refresh it with `python scripts/verify_package.py --write`.

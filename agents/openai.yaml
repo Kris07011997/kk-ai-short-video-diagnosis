@@ -1,0 +1,4 @@
+interface:
+  display_name: "KK Video Diagnosis / KK·AI短片诊断"
+  short_description: "Evidence-based video review with Chinese or English PDF reports"
+  default_prompt: "Use $kk-ai-short-video-diagnosis to review my video and deliver one evidence-based PDF in my requested language, or otherwise the main language of my message."

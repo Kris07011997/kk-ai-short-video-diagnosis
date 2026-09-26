@@ -1,0 +1,2 @@
+# Preserve package bytes across Windows and Unix for SHA-256 verification.
+* -text

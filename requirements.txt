@@ -1,0 +1,3 @@
+reportlab>=4.0,<5
+Pillow>=10.0,<12
+pypdf>=5,<7

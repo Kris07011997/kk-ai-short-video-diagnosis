@@ -1,0 +1,54 @@
+{
+  "language": "en",
+  "title": "Replace with the video title",
+  "source_video": "replace-with-your-video.mp4",
+  "one_line_judgment": "Write a judgment grounded in the complete video review.",
+  "creator_intent": {
+    "summary": "Describe the intended audience and effect.",
+    "confidence": "medium"
+  },
+  "strengths": [],
+  "issues": [
+    {
+      "id": "issue-1",
+      "start": 1.0,
+      "end": 4.0,
+      "headline": "Describe one distinct problem",
+      "evidence": "Describe what actually happens at the selected timestamps and why it affects viewing.",
+      "action": "Specify an edit that addresses the observed problem.",
+      "confidence": "medium",
+      "evidence_moments": [
+        {
+          "time": 1.0,
+          "label": "Describe the first source frame"
+        },
+        {
+          "time": 4.0,
+          "label": "Describe the second source frame"
+        }
+      ],
+      "kk_method": {
+        "name": "Name the relevant method",
+        "rule": "Explain the method in English.",
+        "why_here": "Connect the method to the evidence in this video.",
+        "case_ids": [],
+        "reference_note": "Replace with verified source IDs, or explain why no direct case was matched."
+      }
+    }
+  ],
+  "quick_actions": [
+    "Write the highest-priority edit."
+  ],
+  "next_practice": "Choose one skill to practice in the next video.",
+  "evidence_limits": [
+    "State any actual limitation of the review."
+  ],
+  "further_learning": [
+    {
+      "issue_id": "issue-1",
+      "source_type": "unmatched",
+      "reference_level": "method_level",
+      "focus": "No direct reference has been matched in this format-only example."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "kk-ai-short-video-diagnosis-v2-evidence-manifest",
+  "created_at": "2026-09-02T13:54:57.816142+00:00",
+  "source_roots": [
+    "daily-mirror-2024",
+    "daily-mirror-2025",
+    "long-tutorials",
+    "daily-mirror-2026",
+    "daily-mirror-2023-book"
+  ],
+  "source_root_count": 5,
+  "case_count": 423,
+  "full_text_document_count": 197,
+  "unique_text_document_count": 194,
+  "duplicate_document_count": 3,
+  "document_candidate_count": 198,
+  "video_metadata_read_count": 431,
+  "video_candidate_count": 507,
+  "unread_item_count": 77,
+  "evidence_rule": "全文文档为可检索文字证据；2023 PDF页码仅用于书稿图示定位；视频仅记录元数据，未被当作已完整观看或已听取。",
+  "integrity_sha256": "20de626954a915d02a8bf1fadc9ff1512b053a74787c9aa7954012404a55cf3b",
+  "daily_mirror_2023": {
+    "chapter_document_count": 6,
+    "chapter_case_count": 207,
+    "pdf_page_text_read_count": 226,
+    "pdf_page_reference_matched_case_count": 116,
+    "unmatched_chapter_case_count": 0,
+    "chapter_breakdown": [
+      {
+        "chapter": "短片构思",
+        "source_document": "第一章 ：短片构思.docx",
+        "case_count": 15,
+        "paragraph_count": 263,
+        "read_mode": "python-docx"
+      },
+      {
+        "chapter": "拍摄技巧",
+        "source_document": "第二章：拍摄技巧.docx",
+        "case_count": 70,
+        "paragraph_count": 1158,
+        "read_mode": "word-xml-fallback"
+      },
+      {
+        "chapter": "剪辑技巧",
+        "source_document": "第三章：剪辑技巧：.docx",
+        "case_count": 72,
+        "paragraph_count": 1198,
+        "read_mode": "word-xml-fallback"
+      },
+      {
+        "chapter": "分镜思维",
+        "source_document": "第四章 ：分镜思维.docx",
+        "case_count": 23,
+        "paragraph_count": 395,
+        "read_mode": "python-docx"
+      },
+      {
+        "chapter": "声音设计",
+        "source_document": "第五章：音效设计.docx",
+        "case_count": 16,
+        "paragraph_count": 215,
+        "read_mode": "python-docx"
+      },
+      {
+        "chapter": "开场与结尾",
+        "source_document": "第六章 ：开篇和结尾设计.docx",
+        "case_count": 11,
+        "paragraph_count": 156,
+        "read_mode": "python-docx"
+      }
+    ]
+  },
+  "daily_mirror_2023_archive": {
+    "archive_document_read_count": 7,
+    "archive_chapter_backup_count": 6,
+    "archive_reference_document_count": 1,
+    "archive_unique_method_case_count": 1,
+    "archive_only_episode_numbers": [
+      129
+    ],
+    "comparison_result": "six early manuscript backups and one reference document read; one unique jump-cut detail retained, all other episode coverage is present in the current six manuscripts"
+  }
+}
